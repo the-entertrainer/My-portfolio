@@ -106,6 +106,7 @@
     --z-negative: -1;
     --z-base: 0;
     --z-dropdown: 10;
+    --z-below-sticky: 15;
     --z-sticky: 20;
     --z-fixed: 30;
     --z-modal: 40;

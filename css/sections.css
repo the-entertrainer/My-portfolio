@@ -47,6 +47,8 @@
     justify-content: center;
     overflow: hidden;
     background: var(--color-bg);
+    padding-top: var(--navbar-height);
+    margin-top: calc(-1 * var(--navbar-height));
 }
 
 .hero-panels {
@@ -233,6 +235,39 @@ nav.is-scrolled .logo-alt {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--space-xl);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: var(--type-nav);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition-base);
+}
+
+.nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    color: var(--color-accent-orange);
+    transition: opacity var(--transition-base);
+}
+
+.nav-link:hover::after {
+    opacity: 1;
 }
 
 /* ===== Marquee Section ===== */

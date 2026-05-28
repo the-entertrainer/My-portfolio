@@ -5,6 +5,7 @@
 export const init = () => {
     const nav = document.querySelector('nav');
     const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
     const navLogo = document.querySelector('.logo');
 
     if (!nav) return;
@@ -13,12 +14,29 @@ export const init = () => {
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
 
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!nav.contains(e.target)) {
                     hamburger.classList.remove('active');
+                    if (navMenu) {
+                        navMenu.classList.remove('active');
+                    }
                 }
+            });
+        });
+    }
+
+    // Close menu when clicking nav links
+    if (navMenu) {
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger?.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
     }
