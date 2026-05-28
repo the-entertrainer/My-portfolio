@@ -46,15 +46,22 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: var(--color-bg);
 }
 
-.hero-container {
+.hero-panels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xl);
+    gap: 0;
     max-width: 100%;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
 .hero-panel {
@@ -92,9 +99,55 @@
     line-height: 1.4;
 }
 
-.hero-logo {
-    font-size: var(--type-large);
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    width: 100%;
+    padding: var(--space-xxl);
+    text-align: center;
+}
+
+.hero-tag {
+    font-size: var(--type-small);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-orange);
     margin-bottom: var(--space-lg);
+}
+
+.hero-headline {
+    font-size: var(--type-hero);
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.88;
+    margin-bottom: var(--space-lg);
+    color: var(--color-text);
+}
+
+.hero-subheading {
+    font-size: var(--type-large);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.hero-description {
+    font-size: var(--type-medium);
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-lg);
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ===== Navigation ===== */
@@ -121,7 +174,7 @@ nav.is-scrolled {
     border-bottom: 1px solid var(--color-border);
 }
 
-.nav-logo {
+.logo {
     font-size: var(--type-medium);
     font-family: var(--font-display);
     font-weight: 700;
@@ -131,19 +184,25 @@ nav.is-scrolled {
     transition: opacity var(--transition-base);
 }
 
-.nav-logo.cute {
+.logo-primary {
+    opacity: 1;
+    transition: opacity var(--transition-base);
+}
+
+.logo-alt {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity var(--transition-base);
+}
+
+nav.is-scrolled .logo-primary {
     opacity: 0;
     position: absolute;
     pointer-events: none;
 }
 
-nav.is-scrolled .nav-logo.main {
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-nav.is-scrolled .nav-logo.cute {
+nav.is-scrolled .logo-alt {
     opacity: 1;
     position: static;
     pointer-events: auto;

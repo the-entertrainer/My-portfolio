@@ -23,7 +23,7 @@
     }
 
     /* Layout */
-    .hero-container {
+    .hero-panels {
         grid-template-columns: 1fr;
         height: auto;
         min-height: 100vh;
@@ -194,7 +194,7 @@
     }
 
     /* Layout */
-    .hero-container {
+    .hero-panels {
         grid-template-columns: 1fr;
         height: auto;
         min-height: 100vh;
@@ -321,7 +321,7 @@
 
 @media (min-width: 992px) and (max-width: 1439px) {
     /* Hero */
-    .hero-container {
+    .hero-panels {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -593,7 +593,7 @@
 
 @supports (display: grid) {
     .grid { display: grid; }
-    .hero-container { display: grid; }
+    .hero-panels { display: grid; }
     .services-grid { display: grid; }
     .case-studies-grid { display: grid; }
 }
