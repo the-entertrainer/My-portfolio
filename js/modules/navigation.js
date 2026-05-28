@@ -5,7 +5,7 @@
 export const init = () => {
     const nav = document.querySelector('nav');
     const hamburger = document.querySelector('.hamburger');
-    const navLogo = document.querySelector('.nav-logo');
+    const navLogo = document.querySelector('.logo');
 
     if (!nav) return;
 

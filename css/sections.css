@@ -583,19 +583,28 @@ nav.is-scrolled .logo-alt {
 
 /* ===== 3D Transforms Section ===== */
 
-. 3d-section {
+.perspective-section {
     position: relative;
     padding: var(--space-xxl);
     perspective: 1000px;
 }
 
-.bill-container {
+.perspective-container {
     perspective: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xxl);
+}
+
+.bill-spin {
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--space-xxl);
+    perspective: 1200px;
 }
 
 .bill {
@@ -651,27 +660,47 @@ nav.is-scrolled .logo-alt {
     align-items: center;
     justify-content: center;
     gap: var(--space-lg);
+    flex-direction: column;
 }
 
-.toggle-face {
-    font-size: var(--type-xlarge);
+.toggle-button {
+    background: none;
+    border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
     transition: transform var(--transition-base);
-    user-select: none;
-}
-
-.toggle-face:hover {
-    transform: scale(1.1);
-}
-
-.toggle-label {
     font-size: var(--type-medium);
+    font-family: var(--font-display);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text);
-    pointer-events: none;
-    min-width: 100px;
+}
+
+.toggle-button:hover {
+    transform: scale(1.1);
+}
+
+.toggle-emoji {
+    font-size: var(--type-xxlarge);
+    display: inline-block;
+    transition: transform var(--transition-base);
+}
+
+.toggle-button:hover .toggle-emoji {
+    transform: scale(1.15);
+}
+
+.toggle-label {
+    display: inline;
+}
+
+.toggle-message {
+    font-size: var(--type-medium);
+    color: var(--color-text-muted);
+    margin-top: var(--space-lg);
 }
 
 /* ===== Testimonials Section ===== */
