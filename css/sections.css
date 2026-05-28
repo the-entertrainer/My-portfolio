@@ -338,6 +338,7 @@ nav.is-scrolled .logo-alt {
     border-radius: var(--border-radius-md);
     font-size: var(--type-large);
     opacity: 0;
+    transform: translateY(40px) rotate(-12deg);
 }
 
 /* ===== About Section ===== */
@@ -740,7 +741,7 @@ nav.is-scrolled .logo-alt {
 
 /* ===== Testimonials Section ===== */
 
-.testimonials {
+.testimonials-section {
     position: relative;
     padding: var(--space-xxl) 0;
     background: var(--color-bg-secondary);
