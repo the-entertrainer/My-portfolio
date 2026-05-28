@@ -1,0 +1,435 @@
+/* ============================================
+   ANIMATIONS: Keyframes, transitions, timing
+   ============================================ */
+
+/* ===== Preloader Animations ===== */
+
+@keyframes bombFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes smokePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.preloader-bomb {
+    animation: bombFloat 2.4s ease-in-out infinite;
+}
+
+.preloader-bomb:nth-child(1) { animation-delay: 0s; }
+.preloader-bomb:nth-child(2) { animation-delay: -0.15s; }
+.preloader-bomb:nth-child(3) { animation-delay: -0.3s; }
+.preloader-bomb:nth-child(4) { animation-delay: -0.45s; }
+.preloader-bomb:nth-child(5) { animation-delay: -0.6s; }
+.preloader-bomb:nth-child(6) { animation-delay: -0.75s; }
+
+/* ===== Hero Panel Reveals ===== */
+
+@keyframes heroReveal {
+    from {
+        clip-path: inset(0 50% 0 0);
+    }
+    to {
+        clip-path: inset(0 0% 0 0);
+    }
+}
+
+@keyframes logoFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-panel {
+    transition: clip-path 1.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.hero-logo {
+    animation: logoFade 0.6s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* ===== Marquee Animations ===== */
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - var(--gap-marquee)));
+    }
+}
+
+.marquee {
+    animation: marqueeScroll 22s linear infinite;
+}
+
+.marquee-section:hover .marquee {
+    animation-play-state: paused;
+}
+
+/* ===== Icon Belt Animations ===== */
+
+@keyframes iconRowScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - var(--gap-icon)));
+    }
+}
+
+@keyframes iconRowScrollReverse {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(50% + var(--gap-icon)));
+    }
+}
+
+.icon-row:nth-child(odd) {
+    animation: iconRowScroll 18s linear infinite;
+}
+
+.icon-row:nth-child(even) {
+    animation: iconRowScrollReverse 24s linear infinite;
+}
+
+/* ===== Fade In Animations ===== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.service-card {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.case-card {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger delays */
+.service-card:nth-child(1) { animation-delay: 0s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(4) { animation-delay: 0.3s; }
+.service-card:nth-child(5) { animation-delay: 0.4s; }
+.service-card:nth-child(6) { animation-delay: 0.5s; }
+
+.case-card:nth-child(1) { animation-delay: 0s; }
+.case-card:nth-child(2) { animation-delay: 0.1s; }
+.case-card:nth-child(3) { animation-delay: 0.2s; }
+.case-card:nth-child(4) { animation-delay: 0.3s; }
+.case-card:nth-child(5) { animation-delay: 0.4s; }
+.case-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* ===== Word Reveal Animation ===== */
+
+@keyframes wordReveal {
+    from {
+        transform: translateY(110%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.word-inner {
+    animation: wordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered delays for individual words */
+.word:nth-child(1) .word-inner { animation-delay: 0s; }
+.word:nth-child(2) .word-inner { animation-delay: 0.09s; }
+.word:nth-child(3) .word-inner { animation-delay: 0.18s; }
+.word:nth-child(4) .word-inner { animation-delay: 0.27s; }
+.word:nth-child(5) .word-inner { animation-delay: 0.36s; }
+.word:nth-child(6) .word-inner { animation-delay: 0.45s; }
+.word:nth-child(7) .word-inner { animation-delay: 0.54s; }
+.word:nth-child(8) .word-inner { animation-delay: 0.63s; }
+.word:nth-child(9) .word-inner { animation-delay: 0.72s; }
+
+/* ===== 3D Transforms ===== */
+
+@keyframes billSpin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes wheelSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bill {
+    animation: billSpin 1.8s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.bill:nth-child(1) { animation-delay: -0.36s; }
+.bill:nth-child(2) { animation-delay: -0.72s; }
+.bill:nth-child(3) { animation-delay: -1.08s; }
+.bill:nth-child(4) { animation-delay: -1.44s; }
+.bill:nth-child(5) { animation-delay: -1.8s; }
+
+.wheel {
+    animation: wheelSpin 4s linear infinite;
+}
+
+/* ===== Video Parallax ===== */
+
+@keyframes parallaxMove {
+    from {
+        transform: translateY(-12%);
+    }
+    to {
+        transform: translateY(12%);
+    }
+}
+
+.video-bg {
+    animation: parallaxMove 8s ease-in-out infinite alternate;
+}
+
+/* ===== Text Scale Animation ===== */
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.video-text {
+    animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== Glitch Effect ===== */
+
+@keyframes glitch1 {
+    0%, 100% {
+        text-shadow: -2px 0 var(--color-accent-red);
+    }
+    50% {
+        text-shadow: 2px 0 var(--color-accent-red);
+    }
+}
+
+@keyframes glitch2 {
+    0%, 100% {
+        text-shadow: 2px 0 var(--color-accent-yellow);
+    }
+    50% {
+        text-shadow: -2px 0 var(--color-accent-yellow);
+    }
+}
+
+/* ===== Button Animations ===== */
+
+@keyframes buttonHover {
+    from {
+        transform: translateY(-2px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.click-button {
+    transition: all var(--transition-base);
+}
+
+.click-button:hover {
+    animation: buttonHover 0.3s ease-out;
+}
+
+/* ===== Toggle Animations ===== */
+
+@keyframes toggleFlip {
+    from {
+        transform: rotateX(0deg) scale(1);
+    }
+    to {
+        transform: rotateX(360deg) scale(1);
+    }
+}
+
+.toggle-face {
+    transition: transform var(--transition-base);
+}
+
+/* ===== Spinner ===== */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+/* ===== Fade In Sequence ===== */
+
+@keyframes sequenceFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Reduced Motion Accessibility ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .preloader-bomb {
+        animation: none !important;
+        opacity: 1;
+    }
+
+    .hero-panel {
+        clip-path: inset(0 0% 0 0) !important;
+    }
+
+    .marquee {
+        animation: none !important;
+    }
+
+    .icon-row {
+        animation: none !important;
+    }
+
+    .scroll-animation {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ===== Link Transitions ===== */
+
+a {
+    position: relative;
+    transition: color var(--transition-base);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent-orange);
+    transition: width var(--transition-base);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* ===== Button Transitions ===== */
+
+button {
+    transition: all var(--transition-base);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--color-accent-orange);
+    outline-offset: 2px;
+}
+
+/* ===== Form Transitions ===== */
+
+input:focus,
+textarea:focus,
+select:focus {
+    transition: all var(--transition-base);
+}
+
+/* ===== Hover Scale Utility ===== */
+
+.hover-scale {
+    transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Hover Opacity ===== */
+
+.hover-opacity {
+    transition: opacity var(--transition-base);
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+/* ===== Stagger Utility (up to 10 items) ===== */
+
+.stagger-1 { animation-delay: 0s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.2s; }
+.stagger-4 { animation-delay: 0.3s; }
+.stagger-5 { animation-delay: 0.4s; }
+.stagger-6 { animation-delay: 0.5s; }
+.stagger-7 { animation-delay: 0.6s; }
+.stagger-8 { animation-delay: 0.7s; }
+.stagger-9 { animation-delay: 0.8s; }
+.stagger-10 { animation-delay: 0.9s; }
