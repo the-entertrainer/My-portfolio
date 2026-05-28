@@ -22,7 +22,7 @@ export const init = () => {
     });
 
     // Testimonial marquee specific handling
-    const testimonialMarquee = document.querySelector('.testimonial-marquee');
+    const testimonialMarquee = document.querySelector('.testimonials-marquee');
     if (testimonialMarquee) {
         const items = testimonialMarquee.querySelectorAll('.testimonial-item');
         items.forEach(item => {

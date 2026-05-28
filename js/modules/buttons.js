@@ -3,7 +3,7 @@
    ============================================ */
 
 export const init = () => {
-    const clickButtons = document.querySelectorAll('.click-button');
+    const clickButtons = document.querySelectorAll('.random-button');
     if (clickButtons.length === 0) return;
 
     const buttonTexts = [

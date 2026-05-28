@@ -27,12 +27,12 @@ export const init = () => {
     }
 
     // Enable 3D perspective on containers
-    const section = document.querySelector('.3d-section');
+    const section = document.querySelector('.perspective-section');
     if (section) {
         section.style.perspective = '1000px';
     }
 
-    const billContainer = document.querySelector('.bill-container');
+    const billContainer = document.querySelector('.bill-spin');
     if (billContainer) {
         billContainer.style.perspective = '1200px';
     }

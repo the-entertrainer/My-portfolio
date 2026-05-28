@@ -7,7 +7,7 @@ export const init = () => {
     if (toggleContainers.length === 0) return;
 
     toggleContainers.forEach(container => {
-        const face = container.querySelector('.toggle-face');
+        const face = container.querySelector('.toggle-emoji');
         const label = container.querySelector('.toggle-label');
 
         if (!face) return;
