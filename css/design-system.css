@@ -1,0 +1,229 @@
+/* ============================================
+   DESIGN SYSTEM: Variables, Colors, Spacing
+   ============================================ */
+
+:root {
+    /* ===== Colors ===== */
+    --color-bg: #050505;
+    --color-bg-secondary: #0f0f0f;
+    --color-bg-tertiary: #1a1a1a;
+    --color-text: #F5F0EB;
+    --color-text-muted: #a8a29e;
+    --color-accent-orange: #F04E0F;
+    --color-accent-yellow: #F9D020;
+    --color-accent-red: #D9261C;
+    --color-accent-purple: #8B5CF6;
+    --color-accent-cyan: #06B6D4;
+    --color-gray-dark: #1a1a1a;
+    --color-gray-light: #3a3a3a;
+    --color-gray-lighter: #4a4a4a;
+    --color-border: rgba(245, 240, 235, 0.12);
+    --color-overlay: rgba(5, 5, 5, 0.55);
+    --color-overlay-light: rgba(5, 5, 5, 0.3);
+
+    /* ===== Typography: Fonts ===== */
+    --font-display: 'Space Mono', monospace;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    /* ===== Typography: Scales (clamp for responsiveness) ===== */
+    --type-hero: clamp(56px, 14vw, 180px);
+    --type-xxlarge: clamp(48px, 10vw, 120px);
+    --type-xlarge: clamp(40px, 8vw, 96px);
+    --type-large: clamp(32px, 6vw, 72px);
+    --type-marquee: clamp(40px, 7vw, 100px);
+    --type-medium: clamp(22px, 4vw, 44px);
+    --type-small: clamp(14px, 2.5vw, 20px);
+    --type-body: clamp(14px, 2vw, 18px);
+    --type-micro: clamp(12px, 1.5vw, 14px);
+
+    /* ===== Spacing System ===== */
+    --space-xs: clamp(4px, 0.5vw, 8px);
+    --space-sm: clamp(8px, 1vw, 12px);
+    --space-md: clamp(12px, 1.5vw, 18px);
+    --space-lg: clamp(18px, 2.5vw, 32px);
+    --space-xl: clamp(32px, 4vw, 56px);
+    --space-xxl: clamp(56px, 6vw, 96px);
+    --space-huge: clamp(80px, 8vw, 140px);
+
+    /* ===== Gaps ===== */
+    --gap-marquee: 0.5em;
+    --gap-grid: var(--space-lg);
+    --gap-icon: 24px;
+    --gap-button: var(--space-md);
+
+    /* ===== Line Heights ===== */
+    --lh-tight: 0.88;
+    --lh-snug: 0.95;
+    --lh-normal: 1.6;
+    --lh-relaxed: 1.8;
+
+    /* ===== Letter Spacing ===== */
+    --ls-tight: -0.02em;
+    --ls-normal: normal;
+    --ls-wide: 0.05em;
+    --ls-wider: 0.1em;
+
+    /* ===== Easing/Timing ===== */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-smooth: cubic-bezier(0.23, 1, 0.320, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --ease-sharp: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ===== Transitions ===== */
+    --transition-fast: 150ms var(--ease-smooth);
+    --transition-base: 300ms var(--ease-smooth);
+    --transition-slow: 500ms var(--ease-smooth);
+
+    /* ===== Borders & Radius ===== */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-full: 9999px;
+    --border-width: 1px;
+    --border-width-thick: 2px;
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+    /* ===== Breakpoints (Mobile First) ===== */
+    --breakpoint-mobile: 479px;
+    --breakpoint-tablet: 480px;
+    --breakpoint-desktop: 992px;
+    --breakpoint-wide: 1440px;
+
+    /* ===== Z-Index Scale ===== */
+    --z-negative: -1;
+    --z-base: 0;
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-fixed: 30;
+    --z-modal: 40;
+    --z-tooltip: 50;
+    --z-cursor: 9999;
+
+    /* ===== Animation Speeds ===== */
+    --anim-preloader: 2.4s;
+    --anim-hero-reveal: 1.2s;
+    --anim-marquee: 22s;
+    --anim-word-reveal: 0.7s;
+    --anim-word-stagger: 0.09s;
+    --anim-3d-spin: 1.8s;
+    --anim-scroll-velocity-base: 4s;
+
+    /* ===== Other ===== */
+    --cursor-size: 24px;
+    --navbar-height: 70px;
+    --navbar-height-scrolled: 60px;
+    --section-padding: var(--space-xxl);
+}
+
+/* ===== Dark Mode (default) ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #050505;
+        --color-text: #F5F0EB;
+    }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0.01ms var(--ease-linear);
+        --transition-base: 0.01ms var(--ease-linear);
+        --transition-slow: 0.01ms var(--ease-linear);
+        --anim-preloader: 0.01ms;
+        --anim-hero-reveal: 0.01ms;
+        --anim-marquee: 0.01ms;
+        --anim-word-reveal: 0.01ms;
+        --anim-3d-spin: 0.01ms;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== Utility Classes ===== */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-grid);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Gradient Utilities ===== */
+
+.gradient-orange-yellow {
+    background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-yellow));
+}
+
+.gradient-red-orange {
+    background: linear-gradient(135deg, var(--color-accent-red), var(--color-accent-orange));
+}
+
+.gradient-purple-yellow {
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-yellow));
+}
+
+.gradient-cyan-red {
+    background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-red));
+}
