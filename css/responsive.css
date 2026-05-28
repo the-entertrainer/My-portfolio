@@ -65,7 +65,7 @@
     }
 
     /* Case Studies Grid */
-    .case-studies-grid {
+    .case-grid {
         grid-template-columns: 1fr;
     }
 
@@ -235,7 +235,7 @@
     }
 
     /* Case Studies Grid */
-    .case-studies-grid {
+    .case-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -336,7 +336,7 @@
     }
 
     /* Case Studies Grid */
-    .case-studies-grid {
+    .case-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -365,7 +365,7 @@
     }
 
     /* Case Studies Grid */
-    .case-studies-grid {
+    .case-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -413,7 +413,7 @@
     }
 
     /* Case Studies Grid */
-    .case-studies-grid {
+    .case-grid {
         grid-template-columns: repeat(5, 1fr);
     }
 
@@ -595,7 +595,7 @@
     .grid { display: grid; }
     .hero-panels { display: grid; }
     .services-grid { display: grid; }
-    .case-studies-grid { display: grid; }
+    .case-grid { display: grid; }
 }
 
 /* ===== Flexbox Support ===== */

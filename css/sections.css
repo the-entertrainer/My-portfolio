@@ -270,16 +270,22 @@ nav.is-scrolled .logo-alt {
 
 .icon-belt {
     position: relative;
-    padding: var(--space-xxl) 0;
+    padding: var(--space-xxl);
     background: var(--color-bg);
     overflow: hidden;
+}
+
+.icon-rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
 }
 
 .icon-row {
     display: flex;
     gap: var(--gap-icon);
-    margin-bottom: var(--space-lg);
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .icon-row:last-child {
@@ -378,7 +384,7 @@ nav.is-scrolled .logo-alt {
     padding: var(--space-xxl);
 }
 
-.case-studies-grid {
+.case-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--gap-grid);
