@@ -11,25 +11,21 @@
     right: 0;
     bottom: 0;
     background: var(--color-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: var(--z-modal);
-}
-
-.preloader-grid {
     display: grid;
     grid-template-columns: repeat(3, 60px);
     grid-template-rows: repeat(2, 60px);
     gap: var(--space-lg);
+    place-content: center;
+    z-index: var(--z-modal);
 }
 
 .preloader-bomb {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     background: var(--color-accent-orange);
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
+    flex-shrink: 0;
 }
 
 .preloader.is-hidden {
@@ -47,8 +43,6 @@
     justify-content: center;
     overflow: hidden;
     background: var(--color-bg);
-    padding-top: var(--navbar-height);
-    margin-top: calc(-1 * var(--navbar-height));
 }
 
 .hero-panels {
@@ -107,6 +101,7 @@
     max-width: 1000px;
     width: 100%;
     padding: var(--space-xxl);
+    padding-top: calc(var(--navbar-height) + var(--space-xxl));
     text-align: center;
 }
 
@@ -163,10 +158,15 @@ nav {
     background: transparent;
     z-index: var(--z-sticky);
     padding: 0 var(--space-lg);
+    transition: all var(--transition-base);
+}
+
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: all var(--transition-base);
+    width: 100%;
+    height: 100%;
 }
 
 nav.is-scrolled {
@@ -239,7 +239,7 @@ nav.is-scrolled .logo-alt {
 
 .nav-menu {
     list-style: none;
-    display: flex;
+    display: none;
     gap: var(--space-xl);
     margin: 0;
     padding: 0;

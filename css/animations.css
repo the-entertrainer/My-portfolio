@@ -6,10 +6,12 @@
 
 @keyframes bombFloat {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
+        opacity: 1;
     }
     50% {
-        transform: translateY(-30px);
+        transform: translateY(-20px) scale(1.05);
+        opacity: 0.85;
     }
 }
 

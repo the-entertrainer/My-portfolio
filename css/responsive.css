@@ -14,6 +14,27 @@
     .display-lg { font-size: var(--type-large); }
     .display-md { font-size: var(--type-medium); }
 
+    .hero-headline {
+        font-size: clamp(28px, 7vw, 36px);
+        line-height: 1;
+        margin-bottom: var(--space-md);
+    }
+
+    .hero-subheading {
+        font-size: clamp(14px, 3.5vw, 18px);
+        margin-bottom: var(--space-md);
+    }
+
+    .hero-description {
+        font-size: clamp(12px, 3vw, 16px);
+        margin-bottom: var(--space-lg);
+    }
+
+    .hero-content {
+        padding: var(--space-lg);
+        padding-top: calc(var(--navbar-height) + var(--space-lg));
+    }
+
     .hero-title {
         font-size: var(--type-xlarge);
     }
@@ -239,6 +260,35 @@
         display: flex;
     }
 
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: var(--space-lg);
+        padding: var(--space-xl);
+        background: rgba(5, 5, 5, 0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--color-border);
+        z-index: calc(var(--z-sticky) - 1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero-headline {
+        font-size: clamp(32px, 5.5vw, 52px);
+        line-height: 1;
+    }
+
+    .hero-content {
+        padding: var(--space-xl);
+        padding-top: calc(var(--navbar-height) + var(--space-xl));
+    }
+
     /* Marquee */
     .marquee {
         font-size: var(--type-medium);
@@ -336,12 +386,11 @@
     .grid-4 { grid-template-columns: repeat(2, 1fr)); }
 }
 
-/* ===== Desktop (992px - 1439px) ===== */
+/* ===== Desktop (992px+) — nav-menu always visible ===== */
 
-@media (min-width: 992px) and (max-width: 1439px) {
-    /* Navigation */
+@media (min-width: 992px) {
     .hamburger {
-        display: none;
+        display: none !important;
     }
 
     .nav-menu {
@@ -354,7 +403,11 @@
         flex-direction: row;
         z-index: auto;
     }
+}
 
+/* ===== Desktop (992px - 1439px) ===== */
+
+@media (min-width: 992px) and (max-width: 1439px) {
     /* Hero */
     .hero-panels {
         grid-template-columns: repeat(2, 1fr);
